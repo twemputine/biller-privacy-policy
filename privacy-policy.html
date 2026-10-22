@@ -1,0 +1,93 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Biller privacy policy</title>
+<meta name="description" content="Privacy policy for the Biller Android app and web app: what is stored, where, and which permissions are used.">
+<style>
+  :root { --bg: #FFFFFF; --text: #0F172A; --muted: #475569; --line: #E2E8F0; --accent: #4F46E5; }
+  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg: #0B1020; --text: #E6EAF5; --muted: #A3ACC2; --line: #243049; --accent: #A5B4FC; } }
+  :root[data-theme="dark"] { --bg: #0B1020; --text: #E6EAF5; --muted: #A3ACC2; --line: #243049; --accent: #A5B4FC; }
+  body { margin: 0; background: var(--bg); color: var(--text); font: 16px/1.6 -apple-system, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
+  main { max-width: 720px; margin: 0 auto; padding: 32px 16px 64px; }
+  h1 { font-size: 28px; line-height: 1.2; margin: 0 0 4px; }
+  h2 { font-size: 18px; margin: 32px 0 8px; }
+  p, li { color: var(--text); }
+  .meta { color: var(--muted); font-size: 14px; margin-bottom: 24px; }
+  table { border-collapse: collapse; width: 100%; font-size: 14.5px; }
+  th, td { text-align: left; padding: 8px 10px; border-top: 1px solid var(--line); vertical-align: top; }
+  th { color: var(--muted); font-weight: 600; }
+  code { font-size: 13.5px; background: rgba(127,127,127,.12); padding: 1px 5px; border-radius: 4px; }
+  a { color: var(--accent); }
+  .summary { border: 1px solid var(--line); border-radius: 12px; padding: 14px 16px; }
+  .summary li { margin: 4px 0; }
+</style>
+</head>
+<body>
+<main>
+  <h1>Biller privacy policy</h1>
+  <div class="meta">Applies to the Biller Android app (<code>com.biller.app</code>) and the Biller web app. Effective 15 October 2026.</div>
+
+  <div class="summary">
+    <strong>In short</strong>
+    <ul>
+      <li>Biller has no server and no user accounts. Everything you enter stays on your device.</li>
+      <li>The developer never receives your bills, balances, income, payments or any identifier.</li>
+      <li>Data leaves the device only when you choose to export a file, export a calendar file, or connect your own Google account.</li>
+      <li>There are no ads, no analytics, no trackers and no third-party SDKs that collect data.</li>
+    </ul>
+  </div>
+
+  <h2>1. What Biller stores</h2>
+  <p>Biller is a bill, debt and payday tracker. You enter the data yourself: bill names, amounts, due dates, categories, balances, interest rates, credit limits, payment history, notes, take-home pay and pay schedule, reminder preferences, and optional settings such as theme and an app-lock PIN. All of it is stored in the app's private storage on your device (in the web version, in your browser's storage for the site). It is not transmitted to the developer or to any server operated by the developer.</p>
+
+  <h2>2. What Biller does not do</h2>
+  <ul>
+    <li>It does not connect to banks, card issuers or lenders, and cannot move money or make payments.</li>
+    <li>It does not access a credit bureau or your credit score.</li>
+    <li>It does not collect analytics, crash reports, advertising identifiers, location, contacts, messages or device identifiers.</li>
+    <li>It does not sell, share or rent any information, because it never has any.</li>
+  </ul>
+
+  <h2>3. Optional Google features</h2>
+  <p>You may sign in with your own Google account to use two optional features. Signing in is never required to use Biller.</p>
+  <table>
+    <tr><th>Feature</th><th>Google permission (scope)</th><th>What Biller does with it</th></tr>
+    <tr><td>Calendar sync</td><td><code>https://www.googleapis.com/auth/calendar</code></td><td>Creates a calendar named “Biller” in your account and writes one recurring all-day event per bill, plus one for paydays. Biller only reads and writes events it created in that calendar. It does not read your other calendars.</td></tr>
+    <tr><td>Drive backup</td><td><code>https://www.googleapis.com/auth/drive.appdata</code></td><td>Stores a single backup file, <code>biller-backup.json</code>, in the app-private area of your Google Drive. That area is only visible to Biller and cannot see any other file in your Drive.</td></tr>
+    <tr><td>Account label</td><td><code>https://www.googleapis.com/auth/userinfo.email</code></td><td>Shows which account is connected. The address is kept on the device only.</td></tr>
+  </table>
+  <p>Sign-in happens directly between your device and Google. On Android the app keeps a refresh token on the device so that sync and backup can run silently; disconnecting in Settings deletes it. Google's handling of your account is governed by <a href="https://policies.google.com/privacy" rel="noopener">Google's privacy policy</a>. Biller's use of information received from Google APIs adheres to the <a href="https://developers.google.com/terms/api-services-user-data-policy" rel="noopener">Google API Services User Data Policy</a>, including the Limited Use requirements. You can revoke Biller's access at any time at <a href="https://myaccount.google.com/permissions" rel="noopener">myaccount.google.com/permissions</a>. The Biller calendar and the Drive backup remain in your Google account until you remove them.</p>
+
+  <h2>4. Exports you create</h2>
+  <p>Backup files (JSON) and calendar files (.ics) are created on request and handed to the app or location you pick in the Android share sheet or browser download. They contain your bill data in plain text. Where you send or store them is under your control.</p>
+
+  <h2>5. Permissions used by the Android app</h2>
+  <table>
+    <tr><th>Permission</th><th>Why</th></tr>
+    <tr><td>Notifications</td><td>Bill reminders on the lead day and the due day.</td></tr>
+    <tr><td>Schedule alarms / run at boot</td><td>Keep reminders scheduled while the app is closed or after a restart.</td></tr>
+    <tr><td>Internet</td><td>Only for the optional Google Calendar and Drive features.</td></tr>
+    <tr><td>Vibrate</td><td>Haptic feedback, which can be turned off.</td></tr>
+    <tr><td>Biometrics</td><td>Optional fingerprint or face unlock for the app lock, handled by the device's own screen lock. Biller never sees biometric data.</td></tr>
+  </table>
+  <p>Biller does not request camera, microphone, location, contacts, SMS, phone or general storage access. Importing a backup uses the system file picker for the single file you choose.</p>
+
+  <h2>6. App lock</h2>
+  <p>If you set a PIN, it is stored only as a salted PBKDF2-SHA256 hash, never in clear text. Biometric unlock is delegated to Android; the app receives only a success or failure result.</p>
+
+  <h2>7. Retention and deletion</h2>
+  <p>Data stays on your device until you delete it. Settings → Delete all bills removes all bill data; uninstalling the app (or clearing its storage) removes everything, including the PIN hash and the Google sign-in token. Backups you exported and the Drive backup are deleted by you, from wherever you stored them or from Settings → Google → Delete cloud backup. Because the developer holds no copy of your data, there is nothing for the developer to delete or hand over.</p>
+
+  <h2>8. Children</h2>
+  <p>Biller is a personal-finance tool intended for adults. It does not knowingly collect information from anyone, including children, because it collects no information.</p>
+
+  <h2>9. Changes</h2>
+  <p>If a future version starts handling data differently, this page will be updated and the in-app Help will say so before the change takes effect. The effective date at the top shows the latest revision.</p>
+
+  <h2>10. Contact</h2>
+  <p>Questions about this policy or the app can be sent to the developer at the support address shown on the Google Play listing.</p>
+</main>
+</body>
+</html>
